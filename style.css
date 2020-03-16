@@ -24,10 +24,10 @@ a {
     text-decoration: none;
     color: inherit;
 }
-.wrapper {
+/* .wrapper {
     width: 1020px;
     margin: 0 auto;
-}
+} */
 
 .container {
     width: 940px;
@@ -345,17 +345,19 @@ textarea::placeholder {
     color: #f48c8f;
     font-size: 12px;
 }
-form {
-    position: relative;
-}
+
 button {
-    position: absolute;
-    right: 0;
-    padding: 10px;
-    border: none;
+    background: #FBC65F;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #f48c8f;
+    padding: 10px 0;
+    width: 136px;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    color: #886A30;
     cursor: pointer;
 }
 
@@ -416,4 +418,39 @@ button {
 }
 .footer__inner .card__links a:first-child {
     margin-right: 6px;
+}
+
+/*
+modal style
+*/
+#modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #0008;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#modal.hidden {
+    display: none;
+}
+
+#message {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #000;
+    text-align: center;
+    background-color:rgba(255,255,255, 0.3);
+}
+
+
+.border-img {
+    border: 5px solid #F06C64;
+}
+.box.border-img{
+    margin-right: 15px;
+    margin-bottom: 5px;
 }
