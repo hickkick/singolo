@@ -12,7 +12,7 @@
 
 <body>
 
-    <div class="wrapper">
+    <div class="wrapper" id="wrapper">
         <header class="header">
             <div class="container">
                 <div class="header__inner">
@@ -21,7 +21,7 @@
                     </div>
                     <nav class="menu">
                         <ul class="menu__list">
-                            <li><a class="active" href="#">HOME</a></li>
+                            <li><a class="active" href="#home">HOME</a></li>
                             <li><a href="#service">SERVICES</a></li>
                             <li><a href="#portfolio">PORTFOLIO</a></li>
                             <li><a href="#about">ABOUT</a></li>
@@ -32,17 +32,43 @@
             </div>
         </header>
 
-        <section class="slider">
+        <section class="home" id="home">
             <div class="container">
-                <div class="slider__inner">
-                    <div class="arrow">
+                <div class="home__inner">
+                    <!-- <div class="arrow">
                         <img src="assets/images/chev.png" alt="arrow">
                     </div>
-                    <img src="assets/images/iPhone Vertical.png" alt="phone">
-                    <img src="assets/images/iPhone Horizontal.png" alt="phone">
+                    <img class="phone" src="assets/images/iPhone Vertical.png" alt="phone">
+                    <div class="black"></div>
+                    <div class="black2"></div>
+                    <img class="phone2" src="assets/images/iPhone Horizontal.png" alt="phone">
                     <div class="arrow arrow_right">
                         <img src="assets/images/chev.png" alt="arrow">
-                    </div>
+                    </div> -->
+                    <div class="slider">
+                        <div class="slider-container">
+                            <div class="slide show">
+                            <div class="description descr">
+                              <img class="project-image phone" src="assets/images/iPhone Vertical.png" alt="project">
+                              <div class="black"></div>
+                              <div class="black2"></div>
+                              <img class="project-image phone2" src="assets/images/iPhone Horizontal.png" alt="project">
+                            </div>
+                          </div>
+                          <div class="slide">
+                            <div class="description">
+                                <div class="black3"></div>
+                              <img class="project-image" src="assets/images/Iphones.png" alt="project">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="control left">
+                          <img class="arrow left" src="assets/images/chev.png" alt="chev">
+                        </div>
+                        <div class="control right arrow_right">
+                          <img class="arrow right" src="assets/images/chev.png" alt="chev">
+                        </div>
+                      </div>
                 </div>
             </div>
         </section>
@@ -152,10 +178,10 @@
                     </p>
                 </div>
                 <div class="links">
-                    <a class="active_link" href="#">All</a>
-                    <a href="#">Web Design</a>
-                    <a href="#">Graphic Design</a>
-                    <a href="#">Artwork</a>
+                    <a class="active_link" href="#portfolio">All</a>
+                    <a href="#portfolio">Web Design</a>
+                    <a href="#portfolio">Graphic Design</a>
+                    <a href="#portfolio">Artwork</a>
                 </div>
                 <div class="portfolio__box">
                     <div class="box">
@@ -284,7 +310,7 @@
                     </p>
                 </div>
                 <div class="contact__inner">
-                    <form  method="GET">
+                    <form id="get-quote">
                         <input type="text" placeholder="Name(Required)" required> <br>
                         <input type="email" placeholder="Email(Required)" required> <br>
                         <input id="subject" type="text" placeholder="Subject"> <br>
