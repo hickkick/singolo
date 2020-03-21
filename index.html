@@ -12,7 +12,7 @@
 
 <body>
 
-    <div class="wrapper">
+    <div class="wrapper" id="wrapper">
         <header class="header">
             <div class="container">
                 <div class="header__inner">
@@ -21,33 +21,59 @@
                     </div>
                     <nav class="menu">
                         <ul class="menu__list">
-                            <li><a class="active" href="#">HOME</a></li>
-                            <li><a href="#">SERVICES</a></li>
-                            <li><a href="#">PORTFOLIO</a></li>
-                            <li><a href="#">ABOUT</a></li>
-                            <li><a href="#">CONTACT</a></li>
+                            <li><a class="active" href="#home">HOME</a></li>
+                            <li><a href="#service">SERVICES</a></li>
+                            <li><a href="#portfolio">PORTFOLIO</a></li>
+                            <li><a href="#about">ABOUT</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
 
-        <section class="slider">
+        <section class="home" id="home">
             <div class="container">
-                <div class="slider__inner">
-                    <div class="arrow">
+                <div class="home__inner">
+                    <!-- <div class="arrow">
                         <img src="assets/images/chev.png" alt="arrow">
                     </div>
-                    <img src="assets/images/iPhone Vertical.png" alt="phone">
-                    <img src="assets/images/iPhone Horizontal.png" alt="phone">
+                    <img class="phone" src="assets/images/iPhone Vertical.png" alt="phone">
+                    <div class="black"></div>
+                    <div class="black2"></div>
+                    <img class="phone2" src="assets/images/iPhone Horizontal.png" alt="phone">
                     <div class="arrow arrow_right">
                         <img src="assets/images/chev.png" alt="arrow">
-                    </div>
+                    </div> -->
+                    <div class="slider">
+                        <div class="slider-container">
+                            <div class="slide show">
+                            <div class="description descr">
+                              <img class="project-image phone" src="assets/images/iPhone Vertical.png" alt="project">
+                              <div class="black"></div>
+                              <div class="black2"></div>
+                              <img class="project-image phone2" src="assets/images/iPhone Horizontal.png" alt="project">
+                            </div>
+                          </div>
+                          <div class="slide">
+                            <div class="description">
+                                <div class="black3"></div>
+                              <img class="project-image" src="assets/images/Iphones.png" alt="project">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="control left">
+                          <img class="arrow left" src="assets/images/chev.png" alt="chev">
+                        </div>
+                        <div class="control right arrow_right">
+                          <img class="arrow right" src="assets/images/chev.png" alt="chev">
+                        </div>
+                      </div>
                 </div>
             </div>
         </section>
 
-        <section class="service">
+        <section class="service" id="service">
             <div class="container">
                 <div class="service__title">
                    <h4>Our Services</h4> 
@@ -141,7 +167,7 @@
             </div>
         </section>
 
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <div class="container">
                 <div class="title">
                     <h4>Portfolio</h4>
@@ -152,10 +178,10 @@
                     </p>
                 </div>
                 <div class="links">
-                    <a class="active_link" href="#">All</a>
-                    <a href="#">Web Design</a>
-                    <a href="#">Graphic Design</a>
-                    <a href="#">Artwork</a>
+                    <a class="active_link" href="#portfolio">All</a>
+                    <a href="#portfolio">Web Design</a>
+                    <a href="#portfolio">Graphic Design</a>
+                    <a href="#portfolio">Artwork</a>
                 </div>
                 <div class="portfolio__box">
                     <div class="box">
@@ -198,7 +224,7 @@
             </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <div class="title">
                     <h4>About Us</h4>
@@ -271,7 +297,7 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="container">
                 <div class="title">
                     <h4>Get a Quote</h4>
@@ -284,12 +310,12 @@
                     </p>
                 </div>
                 <div class="contact__inner">
-                    <form  method="GET">
+                    <form id="get-quote">
                         <input type="text" placeholder="Name(Required)" required> <br>
                         <input type="email" placeholder="Email(Required)" required> <br>
-                        <input type="text" placeholder="Subject"> <br>
-                        <textarea  placeholder="Describe your project in detail..."></textarea> <br>
-                        <button type="submit">Submit</button>
+                        <input id="subject" type="text" placeholder="Subject"> <br>
+                        <textarea id="descr"  placeholder="Describe your project in detail..."></textarea> <br>
+                        <button id="send" type="submit">SEND</button>
                     </form>
                     <div class="info-box">
                         <h4 class="info-box__title">Contact Information</h4>
@@ -302,6 +328,14 @@
                         <a class="info-box__link" href="tel:035283318635"> 03528 331 86 35 </a>
                         <a class="info-box__link" href="mailto:info@singolo.com"> info@singolo.com</a>
                     </div>
+                </div>
+            </div>
+            <div id="modal" class="hidden">
+                <div id="message">
+                    <p> <span>The letter was sent  </span> </p>  <br>
+                    <p> <span id="result"></span> </p>  <br>
+                    <p> <span id="resultsec"></span> </p>
+                    <button id="close-btn">Ok</button>
                 </div>
             </div>
         </section>
@@ -321,6 +355,9 @@
         </footer>
     </div>
 
+    
+
+    <script src="script.js"></script>
 </body>
 
 </html>
