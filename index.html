@@ -28,6 +28,9 @@
                             <li><a href="#contact">CONTACT</a></li>
                         </ul>
                     </nav>
+                    <div class="burger">
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </header>
@@ -35,24 +38,24 @@
         <section class="home" id="home">
             <div class="container">
                 <div class="home__inner">
-                    <!-- <div class="arrow">
-                        <img src="assets/images/chev.png" alt="arrow">
-                    </div>
-                    <img class="phone" src="assets/images/iPhone Vertical.png" alt="phone">
-                    <div class="black"></div>
-                    <div class="black2"></div>
-                    <img class="phone2" src="assets/images/iPhone Horizontal.png" alt="phone">
-                    <div class="arrow arrow_right">
-                        <img src="assets/images/chev.png" alt="arrow">
-                    </div> -->
                     <div class="slider">
                         <div class="slider-container">
                             <div class="slide show">
                             <div class="description descr">
-                              <img class="project-image phone" src="assets/images/iPhone Vertical.png" alt="project">
+                                <picture>
+                                    <source media="(max-width: 800px)" srcset="assets/images/phone-vertical-tab.png" >
+                                    <source media="(max-width: 700px)" srcset="assets/images/phone-horizontal-mob.png" >
+                                  <img class="project-image phone" src="assets/images/iPhone Vertical.png" alt="project">  
+                                </picture>
+                              
                               <div class="black"></div>
                               <div class="black2"></div>
-                              <img class="project-image phone2" src="assets/images/iPhone Horizontal.png" alt="project">
+                              <picture>
+                                  <source media="max-width: 800px" srcset="assets/images/phone-horizontal-tab.png">
+                                  <source media="max-width: 800px" srcset="assets/images/phone-horizontal-mob.png">
+                                  <img class="project-image phone2" src="assets/images/iPhone Horizontal.png" alt="project">
+                              </picture>
+                              
                             </div>
                           </div>
                           <div class="slide">
@@ -310,13 +313,14 @@
                     </p>
                 </div>
                 <div class="contact__inner">
+                    <div class="contact__form">
                     <form id="get-quote">
                         <input type="text" placeholder="Name(Required)" required> <br>
                         <input type="email" placeholder="Email(Required)" required> <br>
                         <input id="subject" type="text" placeholder="Subject"> <br>
                         <textarea id="descr"  placeholder="Describe your project in detail..."></textarea> <br>
                         <button id="send" type="submit">SEND</button>
-                    </form>
+                    </form></div>
                     <div class="info-box">
                         <h4 class="info-box__title">Contact Information</h4>
                         <p class="info-box__text">
@@ -352,7 +356,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> 
     </div>
 
     

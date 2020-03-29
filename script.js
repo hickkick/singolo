@@ -1,4 +1,5 @@
-// const MENU = document.querySelector('.menu__list');
+const MENU = document.querySelector('.menu__list');
+const NAV = document.querySelector('.menu');
 const TABS = document.querySelector('.links');
 const BUTTON = document.getElementById('send');
 const CLOSE_BUTTON = document.getElementById('close-btn');
@@ -6,7 +7,8 @@ const IMAGE = document.querySelector('.portfolio__box');
 const nodelist = document.querySelectorAll('.portfolio__box img');
 const nodelistToArray = Array.apply(null, nodelist);
 const phoneBg = document.querySelector('.description');
-
+const BURGER = document.querySelector('.burger');
+const LOGO = document.querySelector('.logo')
 // MENU.addEventListener('click', (event) => {
 //     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
 //     event.target.classList.add('active');
@@ -19,9 +21,11 @@ TABS.addEventListener('click', (event) => {
     console.log(nodelistToArray);
 });
 
-BUTTON.addEventListener('click', () => {
+BUTTON.addEventListener('click', (evt) => {
     const subject = document.getElementById('subject').value.toString();
     const descr = document.getElementById('descr').value.toString();
+
+	evt.preventDefault();
 
     if (subject == "" || subject === undefined) {
         document.getElementById('result').innerText = "Without subject";
@@ -71,12 +75,12 @@ function onScroll(event) {
 
 }
 
-
+//phone black BG
 phoneBg.addEventListener('click', (event) => {
     let phoneBlack = document.querySelector('.black');
     let phoneBlack2 = document.querySelector('.black2');
-    let phoneBlack3 = document.querySelector('.black3');
-console.log('click');
+	let phoneBlack3 = document.querySelector('.black3');
+	
     if (event.target.className == "project-image phone") {
         phoneBlack.classList.toggle('db');
     } else if (event.target.className == "project-image phone2") {
@@ -227,3 +231,13 @@ const swipedetect = (el) => {
 
 var el = document.querySelector('.slider');
 swipedetect(el);
+
+
+// burger
+
+BURGER.addEventListener('click', function() {
+	BURGER.classList.toggle('active-burger');
+	NAV.classList.toggle('active-burger');
+	MENU.classList.toggle('active-burger');
+	LOGO.classList.toggle('active-burger');
+});
